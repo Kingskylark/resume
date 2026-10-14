@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kopuko King | Resume</title>
+<meta name="description" content="Resume of Kopuko King: AI evaluation, quality review, web development and teaching. Based in Uyo, Nigeria.">
+<meta property="og:title" content="Kopuko King | Resume">
+<meta property="og:description" content="AI evaluation, quality review and technical team support.">
+<meta name="theme-color" content="#1D5C78">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+/* Layout: one centred column, name block on top, dated entries in a two-column grid (date rail + content) that stacks on phones. */
+:root {
+  --bg: #F5F7F8;
+  --surface: #FFFFFF;
+  --ink: #14212B;
+  --muted: #55656F;
+  --rule: #D3DCE1;
+  --accent: #1D5C78;
+  --accent-soft: #E3EEF3;
+  --font-display: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E161C; --surface: #141F27; --ink: #E5EDF1; --muted: #9AABB5;
+    --rule: #263641; --accent: #74B5D2; --accent-soft: #1A2B35;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E161C; --surface: #141F27; --ink: #E5EDF1; --muted: #9AABB5;
+  --rule: #263641; --accent: #74B5D2; --accent-soft: #1A2B35;
+  color-scheme: dark;
+}
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  padding-block: 32px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.sheet {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: clamp(24px, 5vw, 52px);
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+header { display: flex; flex-direction: column; gap: 10px; padding-bottom: 26px; border-bottom: 2px solid var(--ink); }
+h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(32px, 6vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-wrap: balance;
+}
+.role { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em; color: var(--accent); margin: 0; }
+.contact { display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 14px; color: var(--muted); margin: 4px 0 0; padding: 0; list-style: none; }
+.contact li { min-width: 0; overflow-wrap: anywhere; }
+.contact b { font-weight: 500; color: var(--ink); }
+
+h2 {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+section { min-width: 0; }
+p { margin: 0; }
+.summary { font-size: 16px; line-height: 1.65; max-width: 68ch; }
+
+.skills { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.skills li { background: var(--accent-soft); color: var(--ink); font-size: 13.5px; padding: 3px 11px; border-radius: 3px; }
+.tech { display: grid; grid-template-columns: 110px 1fr; gap: 6px 16px; margin: 18px 0 0; font-size: 14px; }
+.tech dt { font-family: var(--font-mono); font-size: 12px; color: var(--muted); padding-top: 2px; }
+.tech dd { margin: 0; min-width: 0; }
+
+.entry { display: grid; grid-template-columns: 138px 1fr; gap: 4px 24px; padding-block: 16px; border-top: 1px solid var(--rule); }
+.entry:first-of-type { border-top: 0; padding-top: 0; }
+.when { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.what { min-width: 0; }
+h3 { font-family: var(--font-display); font-weight: 600; font-size: 17px; line-height: 1.35; margin: 0; text-wrap: balance; }
+.org { color: var(--muted); font-size: 14px; margin: 1px 0 8px; }
+.what ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.what li::marker { color: var(--accent); }
+.what li { padding-left: 2px; }
+
+.plain { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.plain li { display: grid; grid-template-columns: 138px 1fr; gap: 2px 24px; }
+.plain .when { padding-top: 2px; }
+.plain span.t { min-width: 0; }
+.plain small { display: block; color: var(--muted); font-size: 13.5px; }
+
+@media (max-width: 600px) {
+  body { padding-block: 16px 40px; font-size: 15px; }
+  .entry, .plain li { grid-template-columns: 1fr; gap: 2px; }
+  .tech { grid-template-columns: 1fr; gap: 0; }
+  .tech dd { margin-bottom: 8px; }
+}
+@media print {
+  body { background: #fff; padding: 0; }
+  .sheet { border: 0; padding: 0; max-width: none; }
+  :root { --bg:#fff; --surface:#fff; --ink:#14212B; --muted:#55656F; --rule:#D3DCE1; --accent:#1D5C78; --accent-soft:#E3EEF3; }
+  .entry { break-inside: avoid; }
+}
+</style>
+
+</head>
+<body>
+<main class="sheet">
+  <header>
+    <h1>Kopuko King</h1>
+    <p class="role">AI EVALUATION &middot; QUALITY REVIEW &middot; TECHNICAL TEAM SUPPORT</p>
+    <ul class="contact">
+      <li><b>Email</b> <a href="mailto:whisper2ku@gmail.com">whisper2ku@gmail.com</a></li>
+      <li><b>Phone</b> <a href="tel:+2348136431667">+234 813 643 1667</a></li>
+      <li><b>Location</b> Uyo, Akwa Ibom, Nigeria (remote)</li>
+    </ul>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">Computer Education graduate and licensed teacher who reviews AI-generated output for accuracy, reasoning quality and guideline compliance. Experienced in checking other people's technical work, giving clear written feedback and keeping standards consistent across a team. Runs the technology for two organisations, from websites to data reporting. Looking to lead a small pod of experts and review its technical output.</p>
+  </section>
+
+  <section>
+    <h2>Core skills</h2>
+    <ul class="skills">
+      <li>AI response evaluation and ranking</li>
+      <li>Hallucination and safety review</li>
+      <li>Guideline compliance</li>
+      <li>Quality assurance</li>
+      <li>Code review and debugging</li>
+      <li>Written feedback</li>
+      <li>Prompt review</li>
+      <li>Research methods</li>
+      <li>Supervising practical work</li>
+      <li>Remote collaboration</li>
+    </ul>
+    <dl class="tech">
+      <dt>Languages</dt><dd>Python, PHP, SQL, HTML, CSS, JavaScript</dd>
+      <dt>Tools</dt><dd>Git, Power BI, Tableau, Streamlit, Excel, Google Colab, Jupyter Notebook, Google Workspace, Notion, Airtable</dd>
+      <dt>Databases</dt><dd>MySQL, SQLite</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="when">2025 &ndash; Present</div>
+      <div class="what">
+        <h3>AI Data Annotation and Evaluation</h3>
+        <p class="org">Freelance, remote</p>
+        <ul>
+          <li>Evaluate AI-generated responses for accuracy, clarity, reasoning quality and instruction compliance.</li>
+          <li>Apply annotation guidelines to text and conversational datasets.</li>
+          <li>Review outputs for hallucinations, contextual inconsistencies, unsafe content and formatting errors.</li>
+          <li>Rank and compare model responses, and write detailed feedback to improve response quality.</li>
+          <li>Keep quality and consistency steady across high-volume review tasks.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2025 &ndash; Present</div>
+      <div class="what">
+        <h3>Tech Specialist</h3>
+        <p class="org">Ogheneyole Charity Foundation, Uyo &middot; <a href="https://ogheneyolecharityfoundation.org/" target="_blank" rel="noopener">ogheneyolecharityfoundation.org</a></p>
+        <ul>
+          <li>Manage all technology operations, including website development and maintenance.</li>
+          <li>Oversee data management and analytics used to monitor performance.</li>
+          <li>Develop digital strategies to improve online visibility and engagement.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2025 &ndash; Present</div>
+      <div class="what">
+        <h3>Tech Specialist</h3>
+        <p class="org">Sapete Integrated Farms Ventures, Uyo &middot; <a href="https://sapeteintegratedfarm.com" target="_blank" rel="noopener">sapeteintegratedfarm.com</a></p>
+        <ul>
+          <li>Manage all technology operations, including website development and maintenance.</li>
+          <li>Oversee data management and analytics used to monitor performance.</li>
+          <li>Develop digital strategies to improve online visibility and customer engagement.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2025 &ndash; 2026</div>
+      <div class="what">
+        <h3>Computer Studies Teacher (NYSC)</h3>
+        <p class="org">Nigerian Navy Secondary School, Akpabuyo</p>
+        <ul>
+          <li>Taught Computer Studies to secondary school students and gave feedback on their work for accuracy and reasoning.</li>
+          <li>Supervised practical sessions in computer literacy and digital safety.</li>
+          <li>Brought ICT tools into classroom activities to improve learning outcomes.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2023 &ndash; 2025</div>
+      <div class="what">
+        <h3>Researcher</h3>
+        <p class="org">Research Titans Hub, London (remote)</p>
+        <ul>
+          <li>Wrote research reports, academic articles and white papers.</li>
+          <li>Designed research methods to keep results accurate and reliable.</li>
+          <li>Worked with academic institutions and industry experts to raise the quality of published research.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2024</div>
+      <div class="what">
+        <h3>Academic Writer and Analyst</h3>
+        <p class="org">Livingston Research, freelance</p>
+        <ul>
+          <li>Delivered writing and analysis for clients across several disciplines.</li>
+          <li>Completed projects in data analysis, software engineering, 3D modelling and UI/UX design to client and institutional standards.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2020 &ndash; 2021</div>
+      <div class="what">
+        <h3>Frontend Developer</h3>
+        <p class="org">Highscore Tech, Uyo</p>
+        <ul>
+          <li>Built and maintained user-friendly websites and held graphic and brand standards.</li>
+          <li>Worked with backend developers to improve usability, and helped them with coding and troubleshooting.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2019 &ndash; 2020</div>
+      <div class="what">
+        <h3>Frontend Developer Intern</h3>
+        <p class="org">Gopius E-Learning Services, Uyo</p>
+        <ul>
+          <li>Built responsive interfaces in HTML, CSS and JavaScript, with exposure to React.js and Vue.js.</li>
+          <li>Took part in code reviews and debugging, and kept project documentation and coding standards consistent across the team.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <ul class="plain">
+      <li>
+        <span class="when">2018 &ndash; 2024</span>
+        <span class="t"><b>B.Sc. (Ed) Computer Education</b>, University of Uyo
+          <small>Second Class Upper, CGPA 4.49. Thesis: Design and Implementation of an Android-Based Computer Education Dictionary.</small></span>
+      </li>
+      <li>
+        <span class="when">2016</span>
+        <span class="t"><b>Diploma in Data Processing</b>, RightTime Business Ventures</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul class="plain">
+      <li><span class="when">May 2026</span><span class="t"><b>Certified AI Data Annotation and Evaluation Professional</b>, micro1</span></li>
+      <li><span class="when">Jul &ndash; Aug 2026</span><span class="t"><b>General AI Fluency Intern</b>, FlyRank AI Internship Program</span></li>
+      <li><span class="when">Dec 2025</span><span class="t"><b>AI For Everyone</b>, DeepLearning.AI (Coursera)</span></li>
+      <li><span class="when">In progress</span><span class="t"><b>Introduction to Generative AI</b>, Google Cloud Skills Boost</span></li>
+      <li><span class="when">2024</span><span class="t"><b>Certified and Licensed Teacher</b>, Teachers Registration Council of Nigeria (TRCN)</span></li>
+      <li><span class="when">2022</span><span class="t"><b>Digital Marketing and E-commerce</b>, Google Career Certificate (Coursera)</span></li>
+      <li><span class="when">2022</span><span class="t"><b>Introduction to Networks</b>, Cisco</span></li>
+      <li><span class="when">2020</span><span class="t"><b>Frontend Fundamentals</b>, Pirple</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Honours and awards</h2>
+    <ul class="plain">
+      <li><span class="when">2025</span><span class="t"><b>Award for Excellence</b>, Department of Computer and Robotics Education, University of Uyo</span></li>
+      <li><span class="when">2023</span><span class="t"><b>Award of Excellence</b>, Educational Media and Technology Students' Association of Nigeria (EMTSAN)</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <p>Ibibio (mother tongue). English, fluent (C2 in listening, reading, writing, speaking and interaction).</p>
+  </section>
+</main>
+</body>
+</html>
